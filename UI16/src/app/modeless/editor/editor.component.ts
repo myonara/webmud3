@@ -112,7 +112,7 @@ export class EditorComponent implements OnInit, AfterViewInit {
     this.fileinfo.save01_start(this.fileinfo.file);
     this.config.outGoingEvents.next('Save:' + closeable);
   }
-  
+
   /* eslint @typescript-eslint/no-this-alias: "warn" */
   onCancel(event) {
     const other = this;
