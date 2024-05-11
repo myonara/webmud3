@@ -20,7 +20,7 @@ RUN apk update && apk upgrade && \
 COPY ./UI17/ /app/
 
 # create the output of the angular app
-RUN ng build --configuration development-unitopia --output-path=dist/out
+RUN ng build --configuration development --output-path=dist/out
 
 # produces the final node.js immage.
 FROM node:20-alpine3.18 AS webmud3
