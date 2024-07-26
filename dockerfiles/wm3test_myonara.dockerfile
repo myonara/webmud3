@@ -44,3 +44,4 @@ EXPOSE 5000
 CMD ["/bin/bash"]
 
 # podman run -it -p 2019:5000 --env-file dockerfiles/env-wm3testuni.list --name wm3test --hostname wm3test myonara/webmud3:unitopiatest
+# 
