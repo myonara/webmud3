@@ -24,6 +24,7 @@ export class Environment implements IEnvironment {
   public readonly charset: string;
   public readonly projectRoot: string;
   public readonly socketRoot: string;
+  public readonly socketTimeout: number;
 
   /**
    * Private constructor to enforce singleton pattern.
@@ -55,11 +56,15 @@ export class Environment implements IEnvironment {
 
     this.charset = String(getEnvironmentVariable('CHARSET', false, 'utf8'));
 
+    this.socketTimeout = Number(
+      getEnvironmentVariable('SOCKET_TIMEOUT', false, '900000'),
+    );
+
     this.projectRoot = resolveModulePath('../../../main.js');
 
     this.socketRoot = String(getEnvironmentVariable('SOCKET_ROOT',false,'/socket.io'));
 
-    logger.info('Environment initialized:', this);
+    logger.info('[Environment] initialized', this);
   }
 
   /**
