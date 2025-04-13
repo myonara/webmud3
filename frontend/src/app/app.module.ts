@@ -1,7 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { NgModule, inject, provideAppInitializer } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { APP_BASE_HREF } from '@angular/common';
+
+import { providePrimeNG } from 'primeng/config';
+// import Aura from '@primeng/themes/aura';
+// import Lara from '@primeng/themes/lara';
+// import Material from '@primeng/themes/material';
+import Nora from '@primeng/themes/nora';
+
+import { DialogService } from 'primeng/dynamicdialog';
+import { MessageService } from 'primeng/api';
+import { Toast } from 'primeng/toast';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,13 +33,32 @@ export function setupAppConfigServiceFactory(
   return () => service.load();
 }
 
-@NgModule({ declarations: [AppComponent],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+@NgModule(
+  { 
+    declarations: [AppComponent],
+    bootstrap: [AppComponent], 
+    imports: [
+      BrowserModule,
+      Toast,
         MudModule,
         NonportalModule,
         ModelessModule,
-        AppRoutingModule], providers: [
+        AppRoutingModule
+      ], 
+    providers: [
         WINDOW_PROVIDERS,
+        provideAnimationsAsync(),
+        providePrimeNG({
+          theme:{
+            preset: Nora,
+          //   options: {
+          //     darkModeSelector: '.my-app-dark'
+          // }
+        },
+          ripple: true,
+        }),
+        MessageService,
+        DialogService,
         CookieService,
         provideAppInitializer(() => {
         const initializerFn = (setupAppConfigServiceFactory)(inject(MudConfigService));

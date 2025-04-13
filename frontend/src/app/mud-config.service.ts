@@ -13,7 +13,7 @@ export class MudConfigService {
 
   load(defaults?: MudConfig): Promise<MudConfig> {
     return new Promise<MudConfig>((resolve) => {
-      this.http.get(getBaseLocation() + 'config/mud_config.json').subscribe(
+      this.http.get(getBaseLocation() + 'mud_config.json').subscribe(
         (response) => {
           // console.log('USING server-side configuration');
           this.data = Object.assign({}, defaults || {}, response || {});

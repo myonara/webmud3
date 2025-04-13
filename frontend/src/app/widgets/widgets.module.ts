@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ScrollPanel } from 'primeng/scrollpanel';
+
 import { InventoryComponent } from './inventory/inventory.component';
 
 @NgModule({
@@ -12,6 +15,7 @@ import { InventoryComponent } from './inventory/inventory.component';
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
+    ScrollPanel
   ],
   exports: [InventoryComponent],
 })

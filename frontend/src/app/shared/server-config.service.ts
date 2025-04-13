@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { WINDOW } from './WINDOW_PROVIDERS';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { UUID } from 'angular2-uuid';
+import { v7 as uuidv7 } from 'uuid'
 
 @Injectable({
   providedIn: 'root',
@@ -213,7 +213,7 @@ export class ServerConfigService {
     this.browserInfo['isTablet'] = isTablet;
     this.browserInfo['isDesktop'] = isDesktopDevice;
     this.browserInfo['clientType'] = clientType;
-    this.browserInfo['clientID'] = UUID.UUID();
+    this.browserInfo['clientID'] = uuidv7();
   }
 
   constructor(

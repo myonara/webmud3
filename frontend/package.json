@@ -1,10 +1,13 @@
 {
-  "name": "ui17",
+  "name": "frontend",
   "version": "0.5.0",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --configuration development",
+    "build:dev:local": "ng build  --configuration development-unitopia",
+    "build:dev:uni": "ng build  --configuration development",
+    "build:prod:uni": "ng build  --configuration production-unitopia",
+    "build:prod:sb": "ng build  --configuration production-seifenblase",
     "test": "ng test",
     "e2e": "ng e2e"
   },
@@ -19,8 +22,8 @@
     "@angular/platform-browser": "^19.2.6",
     "@angular/platform-browser-dynamic": "^19.2.6",
     "@angular/router": "^19.2.6",
+    "@primeng/themes": "^19.0.10",
     "ace-builds": "^1.39.1",
-    "angular2-uuid": "^1.1.1",
     "ngx-cookie-service": "^19.1.2",
     "ngx-device-detector": "^9.0.0",
     "primeflex": "^4.0.0",
@@ -29,6 +32,7 @@
     "rxjs": "^7.8.2",
     "socket.io-client": "^4.8.1",
     "tslib": "^2.6.2",
+    "uuid": "^11.1.0",
     "zone.js": "^0.15.0"
   },
   "devDependencies": {

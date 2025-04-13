@@ -272,7 +272,7 @@ export class EditorComponent implements OnInit, AfterViewInit {
       'basePath',
       'https://unpkg.com/ace-builds@1.4.12/src-noconflict',
     );
-    ace.config.set('fontSize', '14px');
+    // ace.config.set('fontSize', '14px');
     if (typeof this.aceEditor === 'undefined') {
       this.aceEditor = ace.edit(this.editor.nativeElement);
     }

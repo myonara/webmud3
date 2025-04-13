@@ -1,6 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
+import { Button } from 'primeng/button';
+import { ConfirmPopup } from 'primeng/confirmpopup';
+import { DialogModule } from 'primeng/dialog';
+import { DropdownModule } from 'primeng/dropdown';
+import { Menubar } from 'primeng/menubar';
+import { TabView,TabPanel } from 'primeng/tabview';
+import { Toast } from 'primeng/toast';
+import { Toolbar } from 'primeng/toolbar';
+
+
 import { ResizableDraggableComponent } from './resizable-draggable/resizable-draggable.component';
 import { FlexibleAreaComponent } from './flexible-area/flexible-area.component';
 import { WindowComponent } from './window/window.component';
@@ -23,7 +34,19 @@ import { CharStatComponent } from './char-stat/char-stat.component';
     KeyoneComponent,
     CharStatComponent,
   ],
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule, 
+    FormsModule,
+    Button,
+    ConfirmPopup,
+    DialogModule,
+    DropdownModule,
+    Menubar,
+    TabView,
+    TabPanel,
+    Toolbar,
+    Toast
+  ],
   providers: [],
   exports: [
     ResizableDraggableComponent,

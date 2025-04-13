@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
-import { UUID } from 'angular2-uuid';
+import { v7 as uuidv7 } from 'uuid'
 import { WindowConfig } from './window-config';
 import { WINDOW } from './WINDOW_PROVIDERS';
 import { MessageService } from 'primeng/api';
@@ -46,7 +46,7 @@ export class WindowService {
   }
   public newWindow(cfg: WindowConfig): string {
     const maxindex = this.windowsconfigurations.length;
-    cfg.windowid = UUID.UUID();
+    cfg.windowid = uuidv7();
     cfg.zIndex = ++this.last_zindex;
     cfg.visible = true;
     cfg.winService = this;

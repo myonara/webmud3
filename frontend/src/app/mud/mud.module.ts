@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { Divider } from 'primeng/divider';
+import { Menubar } from 'primeng/menubar';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MudclientComponent } from './mudclient/mudclient.component';
 import { MudmenuComponent } from './mudmenu/mudmenu.component';
@@ -16,6 +20,8 @@ import { WidgetsModule } from '../widgets/widgets.module';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    Divider,
+    Menubar,
     SettingsModule,
     WidgetsModule,
   ],
