@@ -510,7 +510,6 @@ export class IoMud {
       return false;
     }
     // console.debug('mudSendData-id ',id);
-    // console.debug('mudSendData-data',id,data);
     this.uplink.socket.emit('mud-input', id, data);
     return true;
   }
@@ -592,21 +591,6 @@ export class IoSocket {
       console.log("SC01",engine.transport.name); // in most cases, prints "websocket"
     });
 
-    engine.on('packet', ({ type, data }) => {
-      // called for each packet received
-      // console.log("SC02 packet",type,data);
-    });
-
-    engine.on('packetCreate', ({ type, data }) => {
-      // called for each packet sent
-      // console.log("SC03 packetCreate",type,data);
-    });
-
-    engine.on('drain', () => {
-      // called when the write buffer is drained
-      // console.log("SC04 drain");
-    });
-
     engine.on('close', (reason) => {
       // called when the underlying connection is closed
       console.log('SC05 close', reason);
@@ -625,7 +609,7 @@ export class IoSocket {
     });
     other.socket.on('connect_error', (error) => {
       if (error.message == 'websocket error') {
-        // console.warn('S24 websocket error')
+        console.warn('S24 websocket error')
       } else {
         console.error('S24 socket-connect error', other.socket.id, error);
       }
@@ -809,7 +793,7 @@ export class IoManager {
       console.error('S21 manager reconnect_failed');
     });
     this.manager.on('ping', () => {
-      // console.error('S22 manager ping');
+      // console.log('S22 manager ping');
     });
     this.reportId('IoManager', this.ManagerId, this);
   }

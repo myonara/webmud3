@@ -11,7 +11,7 @@ import { WindowConfig } from 'src/app/shared/window-config';
 export class DirlistComponent implements OnInit {
   @Input() set config(cfg: WindowConfig) {
     this._config = cfg;
-    // console.log("config:",cfg);
+    console.log("[DirList]-config:",cfg);
     this.updateDirList();
   }
   get config(): WindowConfig {
@@ -32,7 +32,7 @@ export class DirlistComponent implements OnInit {
     }
     this.path = this.musi.filepath;
     this.entries = this.musi.entries;
-    console.debug('DirlistComponent-updateDirList', this.path);
+    console.debug('[DirList]-updateDirList', this.path);
   }
   fileOpen(file: string, event = undefined) {
     this.config.outGoingEvents.next('FileOpen:' + this.path + ':' + file);
@@ -41,11 +41,10 @@ export class DirlistComponent implements OnInit {
     this.config.outGoingEvents.next('ChangeDir:' + this.path + ':' + dir);
   }
   ngOnInit(): void {
-    console.debug('inComingEvents-DirList');
     this.config.inComingEvents.subscribe(
       (event: string) => {
         this.updateDirList();
-        // console.log('inComingEvents-DirList', event);
+        console.log('inComingEvents-DirList', event);
       },
       (error) => {
         console.error('incomingEvents-DirList', error);

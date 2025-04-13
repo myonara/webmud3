@@ -20,7 +20,7 @@ export class WindowComponent {
   @ViewChild('dialog') dialog;
 
   doWindowAction(event: any, actionType: string) {
-    //console.log(actionType,event);
+    console.log("[window.comp]",actionType,event);
     switch (actionType) {
       case 'resize_end':
         this.config.inComingEvents.next(

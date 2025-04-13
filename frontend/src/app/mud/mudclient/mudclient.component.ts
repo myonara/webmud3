@@ -141,7 +141,7 @@ export class MudclientComponent implements AfterViewChecked {
       default:
         if (act.item.id.startsWith('MUD:CONNECT:')) {
           const mudkey = act.item.id.split(':')[2];
-          // console.log(act.item.id);
+          console.log(act.item.id);
           this.mudName = mudkey;
           this.connect();
           this.changeFocus = -3;
@@ -310,9 +310,7 @@ export class MudclientComponent implements AfterViewChecked {
       ':' +
       (ts.getSeconds() < 10 ? '0' : '') +
       ts.getSeconds();
-    //console.debug('mudclient-sendMessage-ansiCurrent-before',this.mudc_id,other.ansiCurrent);
     const a2harr = other.ansiService.processAnsi(other.ansiCurrent);
-    //console.debug('mudclient-sendMessage-s2harr after',this.mudc_id,a2harr);
     for (let ix = 0; ix < a2harr.length; ix++) {
       if (a2harr[ix].text != '' || typeof a2harr[ix].mudEcho !== 'undefined') {
         other.mudlines = other.mudlines.concat(a2harr[ix]);
@@ -533,15 +531,15 @@ export class MudclientComponent implements AfterViewChecked {
                 ]);
                 return;
               default:
-                // console.warn('S96-unknown MsgType with IoMud', ioResult);
+                console.warn('S96-unknown MsgType with IoMud', ioResult);
             }
             break;
           default:
-            // console.warn('S96-unknown idType', ioResult);
+            console.warn('S96-unknown idType', ioResult);
         }
       },
       (error) => {
-        // console.error(error);
+        console.error(error);
       },
     );
     return;

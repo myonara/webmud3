@@ -141,7 +141,7 @@ export class WindowService {
         other.wincfg.get(index as unknown as string),
       );
     }
-    // console.log('deleteWindow', index, other.windowsconfigurations);
+    console.log('deleteWindow', index, other.windowsconfigurations);
     const maxindex = other.windowsconfigurations.length - 1;
     let zoffset;
     for (let i: number = index as number; i < maxindex; i++) {
