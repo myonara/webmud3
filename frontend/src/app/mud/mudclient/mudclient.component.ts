@@ -32,9 +32,10 @@ import { KeypadConfigComponent } from 'src/app/modeless/keypad-config/keypad-con
 import { KeypadData } from 'src/app/shared/keypad-data';
 
 @Component({
-  selector: 'app-mudclient',
-  templateUrl: './mudclient.component.html',
-  styleUrls: ['./mudclient.component.scss'],
+    selector: 'app-mudclient',
+    templateUrl: './mudclient.component.html',
+    styleUrls: ['./mudclient.component.scss'],
+    standalone: false
 })
 export class MudclientComponent implements AfterViewChecked {
   @Input() cfg: WebmudConfig;

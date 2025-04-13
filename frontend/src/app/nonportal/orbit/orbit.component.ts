@@ -3,9 +3,10 @@ import { WebmudConfig } from '../../mud/webmud-config';
 import { ServerConfigService } from '../../shared/server-config.service';
 
 @Component({
-  selector: 'app-orbit',
-  templateUrl: './orbit.component.html',
-  styleUrls: ['./orbit.component.scss'],
+    selector: 'app-orbit',
+    templateUrl: './orbit.component.html',
+    styleUrls: ['./orbit.component.scss'],
+    standalone: false
 })
 export class OrbitComponent {
   public mudcfg: WebmudConfig = {

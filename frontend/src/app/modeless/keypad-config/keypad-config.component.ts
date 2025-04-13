@@ -5,9 +5,10 @@ import { ReadLanguageService } from 'src/app/read-language.service';
 import { KeypadData } from 'src/app/shared/keypad-data';
 
 @Component({
-  selector: 'app-keypad-config',
-  templateUrl: './keypad-config.component.html',
-  styleUrls: ['./keypad-config.component.scss'],
+    selector: 'app-keypad-config',
+    templateUrl: './keypad-config.component.html',
+    styleUrls: ['./keypad-config.component.scss'],
+    standalone: false
 })
 export class KeypadConfigComponent implements OnInit {
   public keypad: KeypadData = new KeypadData();

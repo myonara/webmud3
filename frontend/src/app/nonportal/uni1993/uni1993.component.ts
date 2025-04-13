@@ -3,9 +3,10 @@ import { WebmudConfig } from '../../mud/webmud-config';
 import { ServerConfigService } from '../../shared/server-config.service';
 
 @Component({
-  selector: 'app-uni1993',
-  templateUrl: './uni1993.component.html',
-  styleUrls: ['./uni1993.component.scss'],
+    selector: 'app-uni1993',
+    templateUrl: './uni1993.component.html',
+    styleUrls: ['./uni1993.component.scss'],
+    standalone: false
 })
 export class Uni1993Component {
   public mudcfg: WebmudConfig = {

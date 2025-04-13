@@ -60,9 +60,10 @@ const ithemes: string[] = [
 ];
 
 @Component({
-  selector: 'app-editor',
-  templateUrl: './editor.component.html',
-  styleUrls: ['./editor.component.scss'],
+    selector: 'app-editor',
+    templateUrl: './editor.component.html',
+    styleUrls: ['./editor.component.scss'],
+    standalone: false
 })
 export class EditorComponent implements OnInit, AfterViewInit {
   @Input() set config(cfg: WindowConfig) {

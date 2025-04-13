@@ -9,9 +9,10 @@ import {
 import { WindowConfig } from 'src/app/shared/window-config';
 
 @Component({
-  selector: 'app-window',
-  templateUrl: './window.component.html',
-  styleUrls: ['./window.component.scss'],
+    selector: 'app-window',
+    templateUrl: './window.component.html',
+    styleUrls: ['./window.component.scss'],
+    standalone: false
 })
 export class WindowComponent {
   @Input() config: WindowConfig;

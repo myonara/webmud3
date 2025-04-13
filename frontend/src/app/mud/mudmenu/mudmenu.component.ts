@@ -6,9 +6,10 @@ import { ReadLanguageService } from 'src/app/read-language.service';
 import { SocketsService } from 'src/app/shared/sockets.service';
 
 @Component({
-  selector: 'app-mudmenu',
-  templateUrl: './mudmenu.component.html',
-  styleUrls: ['./mudmenu.component.scss'],
+    selector: 'app-mudmenu',
+    templateUrl: './mudmenu.component.html',
+    styleUrls: ['./mudmenu.component.scss'],
+    standalone: false
 })
 export class MudmenuComponent {
   @Input() set connected(conn: boolean) {

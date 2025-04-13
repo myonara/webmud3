@@ -3,9 +3,10 @@ import { FileEntries, MudSignals } from 'src/app/mud/mud-signals';
 import { WindowConfig } from 'src/app/shared/window-config';
 
 @Component({
-  selector: 'app-dirlist',
-  templateUrl: './dirlist.component.html',
-  styleUrls: ['./dirlist.component.scss'],
+    selector: 'app-dirlist',
+    templateUrl: './dirlist.component.html',
+    styleUrls: ['./dirlist.component.scss'],
+    standalone: false
 })
 export class DirlistComponent implements OnInit {
   @Input() set config(cfg: WindowConfig) {

@@ -3,11 +3,11 @@ import { AnsiData } from '../ansi-data';
 import { AnsiService } from '../ansi.service';
 
 @Component({
-  selector: 'app-mudspan',
-  template:
-    '<span display="inline" [ngClass]="myclasses" [style.color]="fg" [style.background]="bg">{{txt}}</span>',
-  // templateUrl: './mudspan.component.html',
-  styleUrls: ['./mudspan.component.scss'],
+    selector: 'app-mudspan',
+    template: '<span display="inline" [ngClass]="myclasses" [style.color]="fg" [style.background]="bg">{{txt}}</span>',
+    // templateUrl: './mudspan.component.html',
+    styleUrls: ['./mudspan.component.scss'],
+    standalone: false
 })
 export class MudspanComponent {
   constructor(private ansiService: AnsiService) {}

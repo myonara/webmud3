@@ -5,9 +5,10 @@ import { ColorSettings } from 'src/app/mud/color-settings';
 import { ReadLanguageService } from 'src/app/read-language.service';
 
 @Component({
-  selector: 'app-color-settings',
-  templateUrl: './color-settings.component.html',
-  styleUrls: ['./color-settings.component.scss'],
+    selector: 'app-color-settings',
+    templateUrl: './color-settings.component.html',
+    styleUrls: ['./color-settings.component.scss'],
+    standalone: false
 })
 export class ColorSettingsComponent implements OnInit {
   cs: ColorSettings = new ColorSettings();

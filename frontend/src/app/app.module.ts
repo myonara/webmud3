@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { NgModule, inject, provideAppInitializer } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { APP_BASE_HREF } from '@angular/common';
 
@@ -32,12 +32,10 @@ export function setupAppConfigServiceFactory(
         AppRoutingModule], providers: [
         WINDOW_PROVIDERS,
         CookieService,
-        {
-            provide: APP_INITIALIZER,
-            useFactory: setupAppConfigServiceFactory,
-            deps: [MudConfigService],
-            multi: true,
-        },
+        provideAppInitializer(() => {
+        const initializerFn = (setupAppConfigServiceFactory)(inject(MudConfigService));
+        return initializerFn();
+      }),
         {
             provide: APP_BASE_HREF,
             useFactory: getBaseLocation,

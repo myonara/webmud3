@@ -9,9 +9,10 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-keyone',
-  templateUrl: './keyone.component.html',
-  styleUrls: ['./keyone.component.scss'],
+    selector: 'app-keyone',
+    templateUrl: './keyone.component.html',
+    styleUrls: ['./keyone.component.scss'],
+    standalone: false
 })
 export class KeyoneComponent {
   @Input() prefix: string;

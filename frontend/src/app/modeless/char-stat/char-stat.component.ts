@@ -2,9 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { WindowConfig } from 'src/app/shared/window-config';
 
 @Component({
-  selector: 'app-char-stat',
-  templateUrl: './char-stat.component.html',
-  styleUrls: ['./char-stat.component.scss'],
+    selector: 'app-char-stat',
+    templateUrl: './char-stat.component.html',
+    styleUrls: ['./char-stat.component.scss'],
+    standalone: false
 })
 export class CharStatComponent implements OnInit {
   @Input() set config(cfg: WindowConfig) {
