@@ -37,3 +37,4 @@
 37. Version 0.3.0: Lots of Bugfixes, minor version upgrades, Inventory Display. no PWA yet!
 38. Version 0.4.0: Lots of Bugfixes, minor version upgrades
 39. Version 0.5.0: Comndensed configuration into one docker image and into main Dockerfile
+40. Version 0.6.0: update from angular,primeng,etc from v17 to v19 and got it up and running on localhost.

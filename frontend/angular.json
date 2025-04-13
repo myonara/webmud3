@@ -87,7 +87,7 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "with": "src/environments/environment.prod.uni.ts"
                 }
               ],
               "optimization": true,
@@ -190,7 +190,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "UI17:build"
+            "buildTarget": "frontend:build"
           }
         },
         "test": {
