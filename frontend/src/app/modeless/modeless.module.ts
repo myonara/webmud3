@@ -5,7 +5,6 @@ import { ResizableDraggableComponent } from './resizable-draggable/resizable-dra
 import { FlexibleAreaComponent } from './flexible-area/flexible-area.component';
 import { WindowComponent } from './window/window.component';
 import { DirlistComponent } from './dirlist/dirlist.component';
-import { PrimeModule } from '../prime.module';
 import { EditorComponent } from './editor/editor.component';
 import { KeypadComponent } from './keypad/keypad.component';
 import { KeypadConfigComponent } from './keypad-config/keypad-config.component';
@@ -24,7 +23,7 @@ import { CharStatComponent } from './char-stat/char-stat.component';
     KeyoneComponent,
     CharStatComponent,
   ],
-  imports: [CommonModule, FormsModule, PrimeModule],
+  imports: [CommonModule, FormsModule],
   providers: [],
   exports: [
     ResizableDraggableComponent,

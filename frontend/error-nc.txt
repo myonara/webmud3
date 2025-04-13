@@ -1,0 +1,683 @@
+
+> ui17@0.5.0 build
+> ng build
+
+❯ Building...
+✔ Building...
+Application bundle generation failed. [6.588 seconds]
+
+X [ERROR] NG8001: 'p-toast' is not a known element:
+1. If 'p-toast' is an Angular component, then verify that it is part of this module.
+2. If 'p-toast' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/app.component.html:0:0:
+      0 │ 
+        ╵ ^
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:6:17:
+      6 │     templateUrl: './app.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-confirmPopup' is not a known element:
+1. If 'p-confirmPopup' is an Angular component, then verify that it is part of this module.
+2. If 'p-confirmPopup' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.html:0:0:
+      0 │ 
+        ╵ ^
+
+  Error occurs in the template of component EditorComponent.
+
+    src/app/modeless/editor/editor.component.ts:64:17:
+      64 │     templateUrl: './editor.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-toolbar' is not a known element:
+1. If 'p-toolbar' is an Angular component, then verify that it is part of this module.
+2. If 'p-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.html:2:0:
+      2 │ <p-toolbar>
+        ╵ ~~~~~~~~~~~
+
+  Error occurs in the template of component EditorComponent.
+
+    src/app/modeless/editor/editor.component.ts:64:17:
+      64 │     templateUrl: './editor.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-toast' is not a known element:
+1. If 'p-toast' is an Angular component, then verify that it is part of this module.
+2. If 'p-toast' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.html:4:8:
+      4 │         <p-toast position="top-left"></p-toast>
+        ╵         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component EditorComponent.
+
+    src/app/modeless/editor/editor.component.ts:64:17:
+      64 │     templateUrl: './editor.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'options' since it isn't a known property of 'p-dropdown'.
+1. If 'p-dropdown' is an Angular component and it has 'options' input, then verify that it is part of this module.
+2. If 'p-dropdown' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.html:9:20:
+      9 │         <p-dropdown [options]="themes" [(ngModel)]="currentTheme" (...
+        ╵                     ~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component EditorComponent.
+
+    src/app/modeless/editor/editor.component.ts:64:17:
+      64 │     templateUrl: './editor.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'virtualScroll' since it isn't a known property of 'p-dropdown'.
+1. If 'p-dropdown' is an Angular component and it has 'virtualScroll' input, then verify that it is part of this module.
+2. If 'p-dropdown' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.html:9:93:
+      9 │ ...nge)="changeTheme()" [virtualScroll]="true" itemSize="10" option...
+        ╵                         ~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component EditorComponent.
+
+    src/app/modeless/editor/editor.component.ts:64:17:
+      64 │     templateUrl: './editor.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'filter' since it isn't a known property of 'p-dropdown'.
+1. If 'p-dropdown' is an Angular component and it has 'filter' input, then verify that it is part of this module.
+2. If 'p-dropdown' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.html:9:149:
+      9 │ ...="10" optionLabel="name" [filter]="true" filterBy="name" [showCl...
+        ╵                             ~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component EditorComponent.
+
+    src/app/modeless/editor/editor.component.ts:64:17:
+      64 │     templateUrl: './editor.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'showClear' since it isn't a known property of 'p-dropdown'.
+1. If 'p-dropdown' is an Angular component and it has 'showClear' input, then verify that it is part of this module.
+2. If 'p-dropdown' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.html:9:181:
+      9 │ ..."true" filterBy="name" [showClear]="true" placeholder="Wähle 'T...
+        ╵                           ~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component EditorComponent.
+
+    src/app/modeless/editor/editor.component.ts:64:17:
+      64 │     templateUrl: './editor.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-menubar' is not a known element:
+1. If 'p-menubar' is an Angular component, then verify that it is part of this module.
+2. If 'p-menubar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.html:10:8:
+      10 │         <p-menubar [model]="items"></p-menubar>
+         ╵         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component EditorComponent.
+
+    src/app/modeless/editor/editor.component.ts:64:17:
+      64 │     templateUrl: './editor.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'model' since it isn't a known property of 'p-menubar'.
+1. If 'p-menubar' is an Angular component and it has 'model' input, then verify that it is part of this module.
+2. If 'p-menubar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.html:10:19:
+      10 │         <p-menubar [model]="items"></p-menubar>
+         ╵                    ~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component EditorComponent.
+
+    src/app/modeless/editor/editor.component.ts:64:17:
+      64 │     templateUrl: './editor.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-button' is not a known element:
+1. If 'p-button' is an Angular component, then verify that it is part of this module.
+2. If 'p-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.html:13:8:
+      13 │         <p-button label="Abbrechen" icon="pi pi-times" (click)="on...
+         ╵         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component EditorComponent.
+
+    src/app/modeless/editor/editor.component.ts:64:17:
+      64 │     templateUrl: './editor.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] TS2345: Argument of type '"fontSize"' is not assignable to parameter of type 'keyof ConfigOptions'. [plugin angular-compiler]
+
+    src/app/modeless/editor/editor.component.ts:275:19:
+      275 │     ace.config.set('fontSize', '14px');
+          ╵                    ~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-tabView' is not a known element:
+1. If 'p-tabView' is an Angular component, then verify that it is part of this module.
+2. If 'p-tabView' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:0:0:
+      0 │ 
+        ╵ ^
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'scrollable' since it isn't a known property of 'p-tabView'.
+1. If 'p-tabView' is an Angular component and it has 'scrollable' input, then verify that it is part of this module.
+2. If 'p-tabView' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:1:11:
+      1 │ <p-tabView [scrollable]="true">
+        ╵            ~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-tabPanel' is not a known element:
+1. If 'p-tabPanel' is an Angular component, then verify that it is part of this module.
+2. If 'p-tabPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:2:4:
+      2 │     <p-tabPanel header="Ohne">
+        ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-tabPanel' is not a known element:
+1. If 'p-tabPanel' is an Angular component, then verify that it is part of this module.
+2. If 'p-tabPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:5:4:
+      5 │     <p-tabPanel header="Umschalt">
+        ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-tabPanel' is not a known element:
+1. If 'p-tabPanel' is an Angular component, then verify that it is part of this module.
+2. If 'p-tabPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:8:4:
+      8 │     <p-tabPanel header="Strg">
+        ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-tabPanel' is not a known element:
+1. If 'p-tabPanel' is an Angular component, then verify that it is part of this module.
+2. If 'p-tabPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:11:4:
+      11 │     <p-tabPanel header="Alt">
+         ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-tabPanel' is not a known element:
+1. If 'p-tabPanel' is an Angular component, then verify that it is part of this module.
+2. If 'p-tabPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:14:4:
+      14 │     <p-tabPanel header="Meta">
+         ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-tabPanel' is not a known element:
+1. If 'p-tabPanel' is an Angular component, then verify that it is part of this module.
+2. If 'p-tabPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:17:4:
+      17 │     <p-tabPanel header="UmschaltStrg">
+         ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-tabPanel' is not a known element:
+1. If 'p-tabPanel' is an Angular component, then verify that it is part of this module.
+2. If 'p-tabPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:20:4:
+      20 │     <p-tabPanel header="UmschaltAlt">
+         ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-tabPanel' is not a known element:
+1. If 'p-tabPanel' is an Angular component, then verify that it is part of this module.
+2. If 'p-tabPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:23:4:
+      23 │     <p-tabPanel header="UmschaltMeta">
+         ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-tabPanel' is not a known element:
+1. If 'p-tabPanel' is an Angular component, then verify that it is part of this module.
+2. If 'p-tabPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/keypad-config/keypad-config.component.html:26:4:
+      26 │     <p-tabPanel header="UmschaltStrgAlt">
+         ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component KeypadConfigComponent.
+
+    src/app/modeless/keypad-config/keypad-config.component.ts:9:17:
+      9 │     templateUrl: './keypad-config.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-dialog' is not a known element:
+1. If 'p-dialog' is an Angular component, then verify that it is part of this module.
+2. If 'p-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/modeless/window/window.component.html:0:0:
+      0 │ 
+        ╵ ^
+
+  Error occurs in the template of component WindowComponent.
+
+    src/app/modeless/window/window.component.ts:13:17:
+      13 │     templateUrl: './window.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'header' since it isn't a known property of 'p-dialog'.
+1. If 'p-dialog' is an Angular component and it has 'header' input, then verify that it is part of this module.
+2. If 'p-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/window/window.component.html:2:4:
+      2 │     [header]="config.wtitle"
+        ╵     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component WindowComponent.
+
+    src/app/modeless/window/window.component.ts:13:17:
+      13 │     templateUrl: './window.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'visible' since it isn't a known property of 'p-dialog'.
+1. If 'p-dialog' is an Angular component and it has 'visible' input, then verify that it is part of this module.
+2. If 'p-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/window/window.component.html:3:4:
+      3 │     [(visible)]="config.visible"
+        ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component WindowComponent.
+
+    src/app/modeless/window/window.component.ts:13:17:
+      13 │     templateUrl: './window.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'closeOnEscape' since it isn't a known property of 'p-dialog'.
+1. If 'p-dialog' is an Angular component and it has 'closeOnEscape' input, then verify that it is part of this module.
+2. If 'p-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/window/window.component.html:4:4:
+      4 │     [closeOnEscape]="false"
+        ╵     ~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component WindowComponent.
+
+    src/app/modeless/window/window.component.ts:13:17:
+      13 │     templateUrl: './window.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'closable' since it isn't a known property of 'p-dialog'.
+1. If 'p-dialog' is an Angular component and it has 'closable' input, then verify that it is part of this module.
+2. If 'p-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/window/window.component.html:5:4:
+      5 │     [closable]="!config.dontCancel"
+        ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component WindowComponent.
+
+    src/app/modeless/window/window.component.ts:13:17:
+      13 │     templateUrl: './window.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'baseZIndex' since it isn't a known property of 'p-dialog'.
+1. If 'p-dialog' is an Angular component and it has 'baseZIndex' input, then verify that it is part of this module.
+2. If 'p-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/window/window.component.html:6:4:
+      6 │     [baseZIndex]="config.zIndex"
+        ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component WindowComponent.
+
+    src/app/modeless/window/window.component.ts:13:17:
+      13 │     templateUrl: './window.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'keepInViewport' since it isn't a known property of 'p-dialog'.
+1. If 'p-dialog' is an Angular component and it has 'keepInViewport' input, then verify that it is part of this module.
+2. If 'p-dialog' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/modeless/window/window.component.html:13:21:
+      13 │     position="right" [keepInViewport]="true"
+         ╵                      ~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component WindowComponent.
+
+    src/app/modeless/window/window.component.ts:13:17:
+      13 │     templateUrl: './window.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-divider' is not a known element:
+1. If 'p-divider' is an Angular component, then verify that it is part of this module.
+2. If 'p-divider' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/mud/mudclient/mudclient.component.html:40:6:
+      40 │ </div><p-divider layout="vertical"></p-divider>
+         ╵       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MudclientComponent.
+
+    src/app/mud/mudclient/mudclient.component.ts:36:17:
+      36 │     templateUrl: './mudclient.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-menubar' is not a known element:
+1. If 'p-menubar' is an Angular component, then verify that it is part of this module.
+2. If 'p-menubar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/mud/mudmenu/mudmenu.component.html:0:0:
+      0 │ 
+        ╵ ^
+
+  Error occurs in the template of component MudmenuComponent.
+
+    src/app/mud/mudmenu/mudmenu.component.ts:10:17:
+      10 │     templateUrl: './mudmenu.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'model' since it isn't a known property of 'p-menubar'.
+1. If 'p-menubar' is an Angular component and it has 'model' input, then verify that it is part of this module.
+2. If 'p-menubar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/mud/mudmenu/mudmenu.component.html:1:11:
+      1 │ <p-menubar [model]="items"></p-menubar>
+        ╵            ~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MudmenuComponent.
+
+    src/app/mud/mudmenu/mudmenu.component.ts:10:17:
+      10 │     templateUrl: './mudmenu.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'label' since it isn't a known property of 'p-checkbox'.
+1. If 'p-checkbox' is an Angular component and it has 'label' input, then verify that it is part of this module.
+2. If 'p-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/settings/color-settings/color-settings.component.html:1:16:
+      1 │     <p-checkbox [label]="i18n.get('Invert Colors')" [(ngModel)]="cs...
+        ╵                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ColorSettingsComponent.
+
+    src/app/settings/color-settings/color-settings.component.ts:9:17:
+      9 │     templateUrl: './color-settings.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'binary' since it isn't a known property of 'p-checkbox'.
+1. If 'p-checkbox' is an Angular component and it has 'binary' input, then verify that it is part of this module.
+2. If 'p-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/settings/color-settings/color-settings.component.html:1:76:
+      1 │ ... [(ngModel)]="cs.invert" [binary]="true" (click)="onClick($event...
+        ╵                             ~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ColorSettingsComponent.
+
+    src/app/settings/color-settings/color-settings.component.ts:9:17:
+      9 │     templateUrl: './color-settings.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'label' since it isn't a known property of 'p-checkbox'.
+1. If 'p-checkbox' is an Angular component and it has 'label' input, then verify that it is part of this module.
+2. If 'p-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/settings/color-settings/color-settings.component.html:2:16:
+      2 │     <p-checkbox [label]="i18n.get('Black on White')" [(ngModel)]="c...
+        ╵                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ColorSettingsComponent.
+
+    src/app/settings/color-settings/color-settings.component.ts:9:17:
+      9 │     templateUrl: './color-settings.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'binary' since it isn't a known property of 'p-checkbox'.
+1. If 'p-checkbox' is an Angular component and it has 'binary' input, then verify that it is part of this module.
+2. If 'p-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/settings/color-settings/color-settings.component.html:2:83:
+      2 │ ...odel)]="cs.blackOnWhite" [binary]="true" (click)="onClick($event...
+        ╵                             ~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ColorSettingsComponent.
+
+    src/app/settings/color-settings/color-settings.component.ts:9:17:
+      9 │     templateUrl: './color-settings.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'label' since it isn't a known property of 'p-checkbox'.
+1. If 'p-checkbox' is an Angular component and it has 'label' input, then verify that it is part of this module.
+2. If 'p-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/settings/color-settings/color-settings.component.html:3:16:
+      3 │     <p-checkbox [label]="i18n.get('Colors off')" [(ngModel)]="cs.co...
+        ╵                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ColorSettingsComponent.
+
+    src/app/settings/color-settings/color-settings.component.ts:9:17:
+      9 │     templateUrl: './color-settings.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'binary' since it isn't a known property of 'p-checkbox'.
+1. If 'p-checkbox' is an Angular component and it has 'binary' input, then verify that it is part of this module.
+2. If 'p-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/settings/color-settings/color-settings.component.html:3:75:
+      3 │ ...(ngModel)]="cs.colorOff" [binary]="true" (click)="onClick($event...
+        ╵                             ~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ColorSettingsComponent.
+
+    src/app/settings/color-settings/color-settings.component.ts:9:17:
+      9 │     templateUrl: './color-settings.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'label' since it isn't a known property of 'p-checkbox'.
+1. If 'p-checkbox' is an Angular component and it has 'label' input, then verify that it is part of this module.
+2. If 'p-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/settings/color-settings/color-settings.component.html:4:16:
+      4 │     <p-checkbox [label]="i18n.get('Local Echo Active')" [(ngModel)]...
+        ╵                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ColorSettingsComponent.
+
+    src/app/settings/color-settings/color-settings.component.ts:9:17:
+      9 │     templateUrl: './color-settings.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'binary' since it isn't a known property of 'p-checkbox'.
+1. If 'p-checkbox' is an Angular component and it has 'binary' input, then verify that it is part of this module.
+2. If 'p-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/settings/color-settings/color-settings.component.html:4:89:
+      4 │ ...l)]="cs.localEchoActive" [binary]="true" (click)="onClick($event...
+        ╵                             ~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ColorSettingsComponent.
+
+    src/app/settings/color-settings/color-settings.component.ts:9:17:
+      9 │     templateUrl: './color-settings.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'inline' since it isn't a known property of 'p-colorPicker'.
+1. If 'p-colorPicker' is an Angular component and it has 'inline' input, then verify that it is part of this module.
+2. If 'p-colorPicker' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/settings/color-settings/color-settings.component.html:5:51:
+      5 │ ...el)]="cs.localEchoColor" [inline]="true" (click)="onClick($event...
+        ╵                             ~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ColorSettingsComponent.
+
+    src/app/settings/color-settings/color-settings.component.ts:9:17:
+      9 │     templateUrl: './color-settings.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'inline' since it isn't a known property of 'p-colorPicker'.
+1. If 'p-colorPicker' is an Angular component and it has 'inline' input, then verify that it is part of this module.
+2. If 'p-colorPicker' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/settings/color-settings/color-settings.component.html:6:56:
+      6 │ ..."cs.localEchoBackground" [inline]="true" (click)="onClick($event...
+        ╵                             ~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ColorSettingsComponent.
+
+    src/app/settings/color-settings/color-settings.component.ts:9:17:
+      9 │     templateUrl: './color-settings.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'p-scrollPanel' is not a known element:
+1. If 'p-scrollPanel' is an Angular component, then verify that it is part of this module.
+2. If 'p-scrollPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/widgets/inventory/inventory.component.html:0:0:
+      0 │ 
+        ╵ ^
+
+  Error occurs in the template of component InventoryComponent.
+
+    src/app/widgets/inventory/inventory.component.ts:6:17:
+      6 │     templateUrl: './inventory.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+

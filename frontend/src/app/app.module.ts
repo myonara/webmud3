@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { MudModule } from './mud/mud.module';
 import { WINDOW_PROVIDERS } from './shared/WINDOW_PROVIDERS';
 import { NonportalModule } from './nonportal/nonportal.module';
-import { PrimeModule } from './prime.module';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ModelessModule } from './modeless/modeless.module';
 // import { ServiceWorkerModule } from '@angular/service-worker';
@@ -27,7 +26,6 @@ export function setupAppConfigServiceFactory(
     bootstrap: [AppComponent], imports: [BrowserModule,
         MudModule,
         NonportalModule,
-        PrimeModule,
         ModelessModule,
         AppRoutingModule], providers: [
         WINDOW_PROVIDERS,

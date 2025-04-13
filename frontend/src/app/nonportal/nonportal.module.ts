@@ -4,7 +4,6 @@ import { MudModule } from '../mud/mud.module';
 import { OrbitComponent } from './orbit/orbit.component';
 import { Uni1993Component } from './uni1993/uni1993.component';
 import { UnitopiaComponent } from './unitopia/unitopia.component';
-import { PrimeModule } from '../prime.module';
 import { DualComponent } from './dual/dual.component';
 import { SeifenblaseComponent } from './seifenblase/seifenblase.component';
 
@@ -16,7 +15,7 @@ import { SeifenblaseComponent } from './seifenblase/seifenblase.component';
     SeifenblaseComponent,
     DualComponent,
   ],
-  imports: [CommonModule, MudModule, PrimeModule],
+  imports: [CommonModule, MudModule],
   exports: [
     UnitopiaComponent,
     OrbitComponent,
