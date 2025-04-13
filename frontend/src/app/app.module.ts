@@ -9,7 +9,7 @@ import { MudModule } from './mud/mud.module';
 import { WINDOW_PROVIDERS } from './shared/WINDOW_PROVIDERS';
 import { NonportalModule } from './nonportal/nonportal.module';
 import { PrimeModule } from './prime.module';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ModelessModule } from './modeless/modeless.module';
 // import { ServiceWorkerModule } from '@angular/service-worker';
 // import { environment } from '../environments/environment';
@@ -23,35 +23,25 @@ export function setupAppConfigServiceFactory(
   return () => service.load();
 }
 
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    MudModule,
-    NonportalModule,
-    PrimeModule,
-    ModelessModule,
-    AppRoutingModule,
-    // ServiceWorkerModule.register('ngsw-worker.js', {
-    //   enabled: environment.production,
-    //   registrationStrategy: 'registerImmediately'
-    // })
-  ],
-  providers: [
-    WINDOW_PROVIDERS,
-    CookieService,
-    {
-      provide: APP_INITIALIZER,
-      useFactory: setupAppConfigServiceFactory,
-      deps: [MudConfigService],
-      multi: true,
-    },
-    {
-      provide: APP_BASE_HREF,
-      useFactory: getBaseLocation,
-    },
-  ],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [AppComponent],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        MudModule,
+        NonportalModule,
+        PrimeModule,
+        ModelessModule,
+        AppRoutingModule], providers: [
+        WINDOW_PROVIDERS,
+        CookieService,
+        {
+            provide: APP_INITIALIZER,
+            useFactory: setupAppConfigServiceFactory,
+            deps: [MudConfigService],
+            multi: true,
+        },
+        {
+            provide: APP_BASE_HREF,
+            useFactory: getBaseLocation,
+        },
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule {}
