@@ -10,7 +10,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { DialogService } from 'primeng/dynamicdialog';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { AnsiData } from '../ansi-data';
 import { WINDOW } from '../../shared/WINDOW_PROVIDERS';
 import { AnsiService } from '../ansi.service';
@@ -45,6 +45,8 @@ export class MudclientComponent implements AfterViewChecked {
   @ViewChild('mudTest', { static: false }) mudTest: ElementRef;
   @ViewChild('mudMenu', { static: false }) mudMenu: ElementRef;
   @ViewChild('scroller', { static: false }) scroller: ElementRef;
+
+  ref: DynamicDialogRef | undefined;
 
   public v = {
     // visualize-parameters
@@ -109,14 +111,14 @@ export class MudclientComponent implements AfterViewChecked {
     if (this.v.inpType != 'text' && typeof this.mudInputLine !== 'undefined') {
       FirstFocus = this.mudInputLine.nativeElement;
       this.changeFocus = 1;
-      console.log('doFocus-2-inputline', this.changeFocus, this.previousFoxus);
+      // console.log('doFocus-2-inputline', this.changeFocus, this.previousFoxus);
     } else if (
       this.v.inpType == 'text' &&
       typeof this.mudInputArea !== 'undefined'
     ) {
       FirstFocus = this.mudInputArea.nativeElement;
       // this.changeFocus = -1;
-      console.log('doFocus-1-inputarea', this.changeFocus, this.previousFoxus);
+      // console.log('doFocus-1-inputarea', this.changeFocus, this.previousFoxus);
     } else if (this.v.inpType != 'text') {
       this.changeFocus = 2;
       return;
@@ -130,7 +132,7 @@ export class MudclientComponent implements AfterViewChecked {
     }
   }
   menuAction(act: any) {
-    console.log('menuAction', act);
+    // console.log('menuAction', act);
     let numpadOther, other;
     let numpadSplit: string[] = [];
     switch (act.item.id) {
@@ -139,7 +141,7 @@ export class MudclientComponent implements AfterViewChecked {
       default:
         if (act.item.id.startsWith('MUD:CONNECT:')) {
           const mudkey = act.item.id.split(':')[2];
-          console.log(act.item.id);
+          // console.log(act.item.id);
           this.mudName = mudkey;
           this.connect();
           this.changeFocus = -3;
@@ -164,7 +166,7 @@ export class MudclientComponent implements AfterViewChecked {
         this.v.scrollLock = !this.v.scrollLock;
         return;
       case 'MUD:NUMPAD':
-        this.dialogService.open(KeypadConfigComponent, {
+        this.ref = this.dialogService.open(KeypadConfigComponent, {
           data: {
             keypad: this.keySetters,
             cb: this.menuAction,
@@ -173,11 +175,14 @@ export class MudclientComponent implements AfterViewChecked {
           header: 'NumPad-Belegung',
           width: '90%',
         });
+        this.ref.onClose.subscribe((data: any) => {
+          console.log("[NumPad] close")
+        });
         return;
       case 'MUD:NUMPAD:RETURN':
         numpadOther = act.item.cbThis;
         numpadOther.keySetters = act.item.keypad;
-        console.log('MUD:NUMPAD:RETURN', act.item.event);
+        // console.log('MUD:NUMPAD:RETURN', act.item.event);
         numpadSplit = act.item.event.split(':');
         if (numpadSplit[2] == 'undefined') {
           numpadSplit[2] = '';
@@ -200,7 +205,7 @@ export class MudclientComponent implements AfterViewChecked {
         // doEvent: act.item.event
         return;
       case 'MUD:VIEW':
-        this.dialogService.open(ColorSettingsComponent, {
+        this.ref = this.dialogService.open(ColorSettingsComponent, {
           data: {
             cs: this.cs,
             cb: this.menuAction,
@@ -209,6 +214,9 @@ export class MudclientComponent implements AfterViewChecked {
           },
           header: 'Change Colors',
           width: '40%',
+        });
+        this.ref.onClose.subscribe((data: any) => {
+          console.log("[ColorSettings] close")
         });
         return;
       case 'MUD_VIEW:COLOR:RETURN':
@@ -351,7 +359,7 @@ export class MudclientComponent implements AfterViewChecked {
       return;
     }
     if (typeof this.keySetters === 'undefined') {
-      console.log('keydown-1', modifiers, event.code);
+      // console.log('keydown-1', modifiers, event.code);
       return;
     }
     if (event.code.startsWith('Numpad') || event.code.startsWith('F')) {
@@ -366,7 +374,7 @@ export class MudclientComponent implements AfterViewChecked {
         event.preventDefault();
         return;
       } else {
-        console.log('keydown-2', modifiers, event.code);
+        // console.log('keydown-2', modifiers, event.code);
       }
     }
   }
@@ -454,14 +462,14 @@ export class MudclientComponent implements AfterViewChecked {
   }
 
   private connect() {
-    console.log('S95-mudclient-connecting-1', this.mudName);
+    // console.log('S95-mudclient-connecting-1', this.mudName);
     if (this.mudName.toLowerCase() == 'disconnect') {
       if (this.mudc_id) {
         if (typeof this.ioMud !== undefined) {
           this.ioMud.disconnectFromMudClient(this.mudc_id);
           this.ioMud = undefined;
         }
-        console.info('S95-mudclient-disconnect', this.mudc_id);
+        // console.info('S95-mudclient-disconnect', this.mudc_id);
         if (this.obs_debug) this.obs_debug.unsubscribe();
         if (this.obs_data) this.obs_data.unsubscribe();
         if (this.obs_signals) this.obs_signals.unsubscribe();
@@ -485,7 +493,7 @@ export class MudclientComponent implements AfterViewChecked {
       mudOb['token'] = this.cfg.autoToken;
       mudOb['password'] = this.cfg.autoPw || '';
     }
-    console.log('S95-mudclient-connecting-2', mudOb);
+    // console.log('S95-mudclient-connecting-2', mudOb);
     this.obs_connect = this.socketsService.mudConnect(mudOb).subscribe(
       (ioResult) => {
         switch (ioResult.IdType) {
@@ -525,30 +533,30 @@ export class MudclientComponent implements AfterViewChecked {
                 ]);
                 return;
               default:
-                console.warn('S96-unknown MsgType with IoMud', ioResult);
+                // console.warn('S96-unknown MsgType with IoMud', ioResult);
             }
             break;
           default:
-            console.warn('S96-unknown idType', ioResult);
+            // console.warn('S96-unknown idType', ioResult);
         }
       },
       (error) => {
-        console.error(error);
+        // console.error(error);
       },
     );
     return;
     // this.obs_connect = this.socketService.mudConnect(mudOb).subscribe(_id => {
-    //   console.log("S05-mudclient-connecting-3",_id);
+    //   // console.log("S05-mudclient-connecting-3",_id);
     //   if (_id == null) {
     //     other.v.connected = false;
     //     other.mudc_id = undefined;
-    //     console.error('mudclient-socketService.mudConnect-failed',_id);
+    //     // console.error('mudclient-socketService.mudConnect-failed',_id);
     //     return;
     //   }
     //   other.mudc_id = _id;
     //   other.obs_connected = other.socketService.mudConnectStatus(_id).subscribe(
     //       flag => {other.v.connected = flag;
-    //       console.log("S05-mudclient-connecting-4",_id,flag);
+    //       // console.log("S05-mudclient-connecting-4",_id,flag);
     //     });
     //   other.obs_signals = other.socketService.mudReceiveSignals(_id).subscribe(
     //       musi => {
@@ -615,11 +623,11 @@ export class MudclientComponent implements AfterViewChecked {
   }
 
   focusFunction(what: string) {
-    console.log('get focus', what);
+    // console.log('get focus', what);
   }
 
   focusOutFunction(what: string) {
-    console.log('out focus', what);
+    // console.log('out focus', what);
   }
 
   ngAfterViewChecked(): void {

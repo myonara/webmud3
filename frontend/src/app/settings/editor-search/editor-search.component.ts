@@ -13,7 +13,7 @@ export class EditorSearchComponent implements OnInit {
   @Input() set config(cfg: WindowConfig) {
     this._config = cfg;
     this.aceEditor = this.config.data['aceEditor'];
-    console.log('config:', cfg);
+    // console.log('config:', cfg);
   }
   get config(): WindowConfig {
     return this._config;

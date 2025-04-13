@@ -51,9 +51,9 @@ export function setupAppConfigServiceFactory(
         providePrimeNG({
           theme:{
             preset: Nora,
-          //   options: {
-          //     darkModeSelector: '.my-app-dark'
-          // }
+            options: {
+              darkModeSelector: '.my-app-dark'
+          }
         },
           ripple: true,
         }),

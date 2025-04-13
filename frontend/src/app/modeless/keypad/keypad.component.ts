@@ -49,7 +49,7 @@ export class KeypadComponent {
         evs[1] = 'Numpad' + evs[1];
         break;
       default:
-        console.log('keypad-unknown event:', event);
+        // console.log('keypad-unknown event:', event);
         return;
     }
     this.keyAction.emit(evs.join(':'));

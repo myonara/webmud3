@@ -12,6 +12,7 @@ import { MudmenuComponent } from './mudmenu/mudmenu.component';
 import { MudspanComponent } from './mudspan/mudspan.component';
 import { SettingsModule } from '../settings/settings.module';
 import { WidgetsModule } from '../widgets/widgets.module';
+import { DialogService } from 'primeng/dynamicdialog';
 
 @NgModule({
   declarations: [MudclientComponent, MudmenuComponent, MudspanComponent],
@@ -25,6 +26,7 @@ import { WidgetsModule } from '../widgets/widgets.module';
     SettingsModule,
     WidgetsModule,
   ],
+  providers: [DialogService],
   exports: [MudclientComponent],
 })
 export class MudModule {}

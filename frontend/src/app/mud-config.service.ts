@@ -17,13 +17,13 @@ export class MudConfigService {
         (response) => {
           // console.log('USING server-side configuration');
           this.data = Object.assign({}, defaults || {}, response || {});
-          console.log('server-side-scope:', this.data);
+          // console.log('server-side-scope:', this.data);
           resolve(this.data);
         },
         () => {
           // console.log('USING default configuration, scope local');
           this.data = Object.assign({}, defaults || {});
-          console.log('default-scope:', this.data);
+          // console.log('default-scope:', this.data);
           resolve(this.data);
         },
       );

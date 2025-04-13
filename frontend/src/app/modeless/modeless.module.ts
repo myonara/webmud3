@@ -7,7 +7,8 @@ import { ConfirmPopup } from 'primeng/confirmpopup';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { Menubar } from 'primeng/menubar';
-import { TabView,TabPanel } from 'primeng/tabview';
+import { TabsModule } from 'primeng/tabs';
+// import { TabPanel } from 'primeng/tabview';
 import { Toast } from 'primeng/toast';
 import { Toolbar } from 'primeng/toolbar';
 
@@ -21,6 +22,7 @@ import { KeypadComponent } from './keypad/keypad.component';
 import { KeypadConfigComponent } from './keypad-config/keypad-config.component';
 import { KeyoneComponent } from './keyone/keyone.component';
 import { CharStatComponent } from './char-stat/char-stat.component';
+import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -42,12 +44,14 @@ import { CharStatComponent } from './char-stat/char-stat.component';
     DialogModule,
     DropdownModule,
     Menubar,
-    TabView,
-    TabPanel,
+    TabsModule,
+    // TabPanel,
     Toolbar,
     Toast
   ],
-  providers: [],
+  providers: [
+    ConfirmationService
+  ],
   exports: [
     ResizableDraggableComponent,
     FlexibleAreaComponent,

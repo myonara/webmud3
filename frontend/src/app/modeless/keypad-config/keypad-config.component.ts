@@ -38,6 +38,9 @@ export class KeypadConfigComponent implements OnInit {
     this.keypad = <KeypadData>this.config.data.keypad;
     this.cb = this.config.data['cb'];
     this.cbThis = this.config.data['cbThis'];
-    console.log('KeypadConfigComponent-1', this.keypad);
+    // console.log('KeypadConfigComponent-1', this.keypad);
+  }
+  closeDialog(data) {
+    this.ref.close(data);
   }
 }

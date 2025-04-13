@@ -183,7 +183,7 @@ export class MudSignalHelpers {
       case 'Files.URL':
         newfile = other.filesrv.processFileInfo(musi.fileinfo);
         if (newfile.alreadyLoaded) {
-          console.log('Files.URL-alreadyLoaded', _id, newfile);
+          // console.log('Files.URL-alreadyLoaded', _id, newfile);
         } else {
           newfile.save04_closing = function (windowsid) {
             console.debug('Files.URL-save04_closing', _id, windowsid);
@@ -197,7 +197,7 @@ export class MudSignalHelpers {
             console.debug('Files.URL-save06_success', _id, windowsid);
             other.wincfg.SaveComplete(windowsid, newfile.closable);
           };
-          console.log('Files.URL-firstLoad', _id, newfile);
+          // console.log('Files.URL-firstLoad', _id, newfile);
           filewincfg = new WindowConfig();
           filewincfg.component = 'EditorComponent';
           filewincfg.data = newfile;
@@ -274,7 +274,7 @@ export class MudSignalHelpers {
         other.keySetters.setLevel(musi.numpadLevel);
         return;
       case 'Core.GoodBye':
-        console.log(
+        console.info(
           'mudclient-socketService.mudReceiveSignals: new stuff-',
           musi,
         );

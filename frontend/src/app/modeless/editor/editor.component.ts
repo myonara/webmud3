@@ -75,7 +75,7 @@ export class EditorComponent implements OnInit, AfterViewInit {
       this.aceSession.setValue(this.text);
       this.aceSession.setMode('ace/mode/' + cfg.data['edditortype']);
     }
-    console.log('config:', cfg);
+    // console.log('config:', cfg);
   }
   get config(): WindowConfig {
     return this._config;
@@ -102,7 +102,7 @@ export class EditorComponent implements OnInit, AfterViewInit {
   private cheight = 0;
 
   onChange(code) {
-    console.log('new code', code);
+    // console.log('new code', code);
   }
   onSave(event: any, closeable: boolean) {
     if (this.readonly) return;
@@ -243,7 +243,7 @@ export class EditorComponent implements OnInit, AfterViewInit {
     this._config.inComingEvents.subscribe(
       (event) => {
         const msgSplit = event.split(':');
-        console.log('editor.inComingEvents.event:', event);
+        // console.log('editor.inComingEvents.event:', event);
         switch (msgSplit[0]) {
           case 'resize':
           case 'resize_init':
@@ -286,7 +286,7 @@ export class EditorComponent implements OnInit, AfterViewInit {
     this.aceSession.setMode('ace/mode/' + this._config.data['edditortype']);
     this.aceEditor.setSession(this.aceSession);
     const themelist = ace.require('ace/ext/themelist'); // delivers undefined!!!
-    console.log('themelist', themelist);
+    // console.log('themelist', themelist);
     this.themes = [];
     // var themeOb :any = themelist.themesByName // error reference undefined
     // themeOb.keys().forEach(themeName => {

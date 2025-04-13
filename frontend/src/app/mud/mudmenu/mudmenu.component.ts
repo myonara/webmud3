@@ -79,10 +79,10 @@ export class MudmenuComponent {
       this.noMudnames &&
       typeof this.socketSrv.mudlist !== 'undefined'
     ) {
-      console.log('menu-event-1', event, this.mudName);
+      // console.log('menu-event-1', event, this.mudName);
       this.refreshMenu(false);
     } else {
-      console.log('menu-event-2', event, this.mudName);
+      // console.log('menu-event-2', event, this.mudName);
       this.menuAction.emit(event); // pass through to parent node.
     }
   }
@@ -106,7 +106,6 @@ export class MudmenuComponent {
       this.i18n.get('MUD'),
       'pi pi-power-off',
     );
-    console.log("add-menu '" + this.mudName + "'", this.socketSrv.mudlist);
     if (this.mudName != '') {
       this.menuSrv.add_menu_item(
         this.menuID,
@@ -117,6 +116,7 @@ export class MudmenuComponent {
         this._connected,
         true,
       );
+      // console.log("add-menu '" + this.mudName + "'", this.socketSrv.mudlist);
     } else {
       if (typeof this.socketSrv.mudlist !== 'undefined') {
         this.socketSrv.mudlist.forEach((m) => {
@@ -131,6 +131,7 @@ export class MudmenuComponent {
           );
         });
       } else {
+        console.error("[mudmenu] no mudname no mudlist");
         this.noMudnames = true;
       }
     }

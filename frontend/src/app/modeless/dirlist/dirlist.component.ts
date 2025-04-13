@@ -45,7 +45,7 @@ export class DirlistComponent implements OnInit {
     this.config.inComingEvents.subscribe(
       (event: string) => {
         this.updateDirList();
-        console.log('inComingEvents-DirList', event);
+        // console.log('inComingEvents-DirList', event);
       },
       (error) => {
         console.error('incomingEvents-DirList', error);

@@ -48,7 +48,7 @@ export class CharacterData {
     for (i = 0; i < csArr.length; i++) {
       this.cStats.push(tmpOb[csArr[i]]);
     }
-    console.log('setStats', this.cStats, csArr, tmpOb);
+    // console.log('setStats', this.cStats, csArr, tmpOb);
   }
 
   // con=34,2|dex=59,7|int=130|str=59,8

@@ -114,7 +114,7 @@ export class WindowService {
       console.error('OnMenuAction-error:', [event, winid, other.wincfg]);
       return;
     }
-    console.log('OnMenuAction:', [event, winid]);
+    // console.log('OnMenuAction:', [event, winid]);
     const cfg: WindowConfig = other.wincfg.get(winid);
     const exp: string[] = event.split(':');
     switch (exp[0]) {
@@ -141,7 +141,7 @@ export class WindowService {
         other.wincfg.get(index as unknown as string),
       );
     }
-    console.log('deleteWindow', index, other.windowsconfigurations);
+    // console.log('deleteWindow', index, other.windowsconfigurations);
     const maxindex = other.windowsconfigurations.length - 1;
     let zoffset;
     for (let i: number = index as number; i < maxindex; i++) {

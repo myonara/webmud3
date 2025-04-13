@@ -136,14 +136,14 @@ export class IoMud {
     });
     socket.on('mud-signal', function (sdata) {
       if (sdata.id !== other.MudId) {
-        console.log('S28: mud-signal Different Ids', sdata.id, other.MudId);
+        console.warn('S28: mud-signal Different Ids', sdata.id, other.MudId);
         return;
       }
       const musi: MudSignals = {
         signal: sdata.signal,
         id: sdata.id,
       };
-      // console.log('S28:mudReceiveSignals',musi);
+      console.log('S28:mudReceiveSignals',musi);
       const r = IoResult.getResult(
         'IoMud',
         other.MudId,
@@ -156,7 +156,7 @@ export class IoMud {
     });
     socket.on('mud-gmcp-start', function (id, gmcp_support) {
       if (other.MudId !== id) {
-        console.log('S28: mud-signal Different Ids', id, other.MudId);
+        console.warn('S28: mud-signal Different Ids', id, other.MudId);
         return;
       }
 
@@ -185,7 +185,7 @@ export class IoMud {
     socket.on('mud-gmcp-incoming', function (id, mod, msg, data) {
       // console.info("G20: GMCP-incoming trace: ",id,mod,msg,data);
       if (other.MudId !== id) {
-        console.log('G20: mud-gmcp-incoming Different Ids', other.MudId, id);
+        console.warn('G20: mud-gmcp-incoming Different Ids', other.MudId, id);
         return;
       }
       const r = IoResult.getResult(
@@ -497,7 +497,7 @@ export class IoMud {
     mod: string,
     onoff: boolean,
   ): boolean {
-    console.log('mudSwitchGmcpModule-', mod, onoff);
+    console.info('mudSwitchGmcpModule-', mod, onoff);
     if (onoff) {
       return this.sendGMCP(_id, 'Core', 'Supports.Add', [mod]);
     } else {
@@ -515,7 +515,7 @@ export class IoMud {
     return true;
   }
   public setMudOutputSize(height: number, width: number) {
-    console.log('S05: resize', this.MudId, height, width);
+    console.info('S05: resize', this.MudId, height, width);
     this.uplink.socket.emit('mud-window-size', this.MudId, height, width);
   }
   public disconnectFromMudClient(id: string) {
@@ -530,10 +530,10 @@ export class IoMud {
       );
       this.eventBus.emit(r);
       this.uplink.reportId('IoMud', id, null);
-      console.log('S06: disconnectFromMudClient known ids:', id);
+      console.warn('S06: disconnectFromMudClient known ids:', id);
     } else {
       this.uplink.reportId('IoMud', id, null);
-      console.log(
+      console.warn(
         'S06: disconnectFromMudClient different ids:',
         id,
         this.MudId,
@@ -589,29 +589,27 @@ export class IoSocket {
     const other = this;
     engine.once('upgrade', () => {
       // called when the transport is upgraded (i.e. from HTTP long-polling to WebSocket)
-      console.log(engine.transport.name); // in most cases, prints "websocket"
+      console.log("SC01",engine.transport.name); // in most cases, prints "websocket"
     });
 
     engine.on('packet', ({ type, data }) => {
       // called for each packet received
-      // console.log("packet",type,data);
-      // console.log("packet",type);
+      // console.log("SC02 packet",type,data);
     });
 
     engine.on('packetCreate', ({ type, data }) => {
       // called for each packet sent
-      // console.log("packetCreate",type,data);
-      // console.log("packetCreate",type);
+      // console.log("SC03 packetCreate",type,data);
     });
 
     engine.on('drain', () => {
       // called when the write buffer is drained
-      // console.log("drain");
+      // console.log("SC04 drain");
     });
 
     engine.on('close', (reason) => {
       // called when the underlying connection is closed
-      console.log('close', reason);
+      console.log('SC05 close', reason);
     });
     other.socket.on('connect', () => {
       console.log('S13 socket-Connected', other.socket.id);
@@ -623,7 +621,7 @@ export class IoSocket {
       }
     });
     other.socket.on('disconnect', (reason) => {
-      console.log('S23 socket-disconnect', other.socket.id, reason);
+      console.warn('S23 socket-disconnect', other.socket.id, reason);
     });
     other.socket.on('connect_error', (error) => {
       if (error.message == 'websocket error') {
@@ -633,18 +631,18 @@ export class IoSocket {
       }
     });
     other.socket.emit('keep-alive', '1', function (level) {
-      console.log('S14 keep alive 1', other.socket.id, level);
+      // console.log('S14 keep alive 1', other.socket.id, level);
     });
     other.socket.on('error', function (error) {
       console.error('S15 socket-error:', other.socket.id, error);
     });
     other.socket.on('disconnecting', function (id, real_ip, server_id, cb) {
-      console.info('S16 socket disconnecting', other.socket.id, ' ');
+      console.warn('S16 socket disconnecting', other.socket.id, ' ');
       // other.send2AllMuds('\r\n [Verbindungsabbruch durch Serverneustart-2 (Fenster aktualisieren!)]\r\n','disconnect');
       cb('disconnected');
     });
     other.socket.on('connecting', function (id, real_ip, server_id, cb) {
-      // console.log("S02.connecting.socketID/serverID: ",id,server_id);
+      console.log("S02.connecting.socketID/serverID: ",id,server_id);
       const notChanged =
         other.compareSocketId(id) && ioManager.compareServerID(server_id);
       if (notChanged) {
@@ -661,7 +659,7 @@ export class IoSocket {
       cb('ok', undefined);
     });
     other.socket.emit('keep-alive', '2', function (level) {
-      console.log('S14 keep alive 2', other.socket.id, level);
+      // console.log('S14 keep alive 2', other.socket.id, level);
     });
   }
   public send2AllMuds(msg: string, action: string) {
@@ -691,7 +689,7 @@ export class IoSocket {
       Object.prototype.hasOwnProperty.call(this.MudIndex, id)
     ) {
       delete this.MudIndex[id];
-      console.log('Count IoMuds:', this.MudIndex.length, id);
+      console.log('[send2AllMuds] Count IoMuds:', this.MudIndex.length, id);
     } else if (ob != null && type == 'IoMud') {
       this.MudIndex[id] = ob;
     }
@@ -751,7 +749,7 @@ export class IoSocket {
         console.log('mudList: ', r.mudlist);
       });
       return () => {
-        console.log('mud-list observer-complete');
+        console.log('mudlist: observer-complete');
       };
     });
     return observable;

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { Button } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ColorPicker } from 'primeng/colorpicker';
 import { Menubar } from 'primeng/menubar';
@@ -16,6 +17,7 @@ import { EditorSearchComponent } from './editor-search/editor-search.component';
     CommonModule, 
     BrowserModule, 
     FormsModule,
+    Button,
     CheckboxModule,
     ColorPicker,
     Menubar],

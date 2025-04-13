@@ -39,4 +39,7 @@ export class ColorSettingsComponent implements OnInit {
     };
     this.cb(newev);
   }
+  closeDialog(data) {
+    this.ref.close(data);
+  }
 }

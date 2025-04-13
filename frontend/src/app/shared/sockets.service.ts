@@ -34,7 +34,7 @@ export class SocketsService {
       .toPromise()
       .then((data) => {
         other.mudlist = data.mudlist;
-        console.log('S42: mudlist:', other.mudlist);
+        // console.log('S42: mudlist:', other.mudlist);
       });
   }
   public mudConnect(mudOb: MudConfig): Observable<IoResult> {

@@ -35,7 +35,7 @@ export class KeypadData {
     const lvl = this.getLevel(msplit[0]);
     const val = lvl.getKey(msplit[1]);
     if (val == '') {
-      console.log('CompondKey Empty:', modifiers);
+      // console.log('CompondKey Empty:', modifiers);
     }
     return val;
   }

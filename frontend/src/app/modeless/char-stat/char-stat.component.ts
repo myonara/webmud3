@@ -10,7 +10,7 @@ import { WindowConfig } from 'src/app/shared/window-config';
 export class CharStatComponent implements OnInit {
   @Input() set config(cfg: WindowConfig) {
     this._config = cfg;
-    console.log('CharStat-config:', cfg);
+    // console.log('CharStat-config:', cfg);
     this.charData = <CharacterData>cfg.data;
   }
   get config(): WindowConfig {
@@ -24,7 +24,7 @@ export class CharStatComponent implements OnInit {
     console.debug('inComingEvents-CharStat-1');
     this.config.inComingEvents.subscribe(
       (event: string) => {
-        console.log('inComingEvents-CharStat-2', event, this.charData);
+        // console.log('inComingEvents-CharStat-2', event, this.charData);
       },
       (error) => {
         console.error('incomingEvents-CharStat-3', error);

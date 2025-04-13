@@ -4,8 +4,8 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ng serve --configuration development",
-    "build:dev:local": "ng build  --configuration development-unitopia",
-    "build:dev:uni": "ng build  --configuration development",
+    "build:dev:uni": "ng build  --configuration development-unitopia",
+    "build:dev:local": "ng build  --configuration development",
     "build:prod:uni": "ng build  --configuration production-unitopia",
     "build:prod:sb": "ng build  --configuration production-seifenblase",
     "test": "ng test",

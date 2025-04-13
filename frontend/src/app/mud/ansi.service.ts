@@ -34,7 +34,7 @@ export class AnsiService {
       result += String.fromCharCode(charCodes[i]);
     }
     result = btoa(result);
-    console.log('toBinaryBase64', result);
+    // console.log('toBinaryBase64', result);
     return result;
   }
 

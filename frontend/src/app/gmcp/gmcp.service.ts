@@ -111,7 +111,7 @@ export class GmcpService {
             const observable = new Observable<GmcpMenu[]>((observer) => {
               observer.next(other.gmcpmenus[gcfg.mud_id]);
               other.gmcpEvE[gcfg.mud_id].subscribe((gmenu) => {
-                console.log('GmcpService-add_gmcp_module-2', gcfg, gmenu);
+                // console.log('GmcpService-add_gmcp_module-2', gcfg, gmenu);
                 observer.next(gmenu);
               });
             });
@@ -120,7 +120,7 @@ export class GmcpService {
             actual_menu.index = other.gmcpmenus[gcfg.mud_id].length;
             other.gmcpmenus[gcfg.mud_id].push(actual_menu);
             other.gmcpEvE[gcfg.mud_id].emit(other.gmcpmenus[gcfg.mud_id]);
-            console.log('GmcpService-add_gmcp_module-3', gcfg, actual_menu);
+            // console.log('GmcpService-add_gmcp_module-3', gcfg, actual_menu);
           }
         },
       );
