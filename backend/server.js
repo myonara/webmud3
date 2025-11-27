@@ -99,10 +99,21 @@ try {
             "description": "Seifenblase",
             "playerlevel": "all",
             "mudfamily": "basistelnet"
-          }
+          },
+          "local": {
+              "name": "LOCAL",
+              "host": "localhost",
+              "port": 3333,
+              "ssl": false,
+              "rejectUnauthorized": false,
+              "description": "Localhost 3333",
+              "playerlevel": "all",
+              "mudfamily": "unitopia"
+            },
         },
         "routes": {
-            "/": "unitopia",
+            "/":"local",
+            "unitopia": "unitopia",
             "seifenblase": "seifenblase"
         }
       };

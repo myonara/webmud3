@@ -1,5 +1,5 @@
 # based on node 10, alpine for least resource requirements.
-FROM node:20.19.4-alpine3.20 AS ng-build-stage
+FROM node:22.20-alpine3.21 AS ng-build-stage
 
 # working dir in build stage
 WORKDIR /app
@@ -26,7 +26,7 @@ ARG configuration=production
 RUN ng build --configuration production --output-path=dist/out
 
 # produces the final node.js immage.
-FROM node:20.19.4-alpine3.20 AS webmud3
+FROM node:22.20-alpine3.21 AS webmud3
 
 # again a working dir...
 WORKDIR /app
@@ -40,8 +40,8 @@ COPY --from=ng-build-stage /app/dist/out/ /app/dist/
 # mkdir runs
 RUN mkdir /run/secrets \
     && mkdir /run/db \
-    && npm install --only=prod 
+    && npm install --only=prod --omit dev
 
-    CMD ["node","server.js"]
+CMD ["node","server.js"]
 
 
